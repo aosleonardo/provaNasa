@@ -27,8 +27,4 @@ public class Terreno {
     public void setEixoY(int eixoY) {
         this.eixoY = eixoY;
     }
-
-    public boolean posicaoRoboTerrenoValida(Robo robo) {
-        return robo.getCoordenadaX() <= this.eixoX - 1 && robo.getCoordenadaY() <= this.eixoY -1 ;
-    }
 }

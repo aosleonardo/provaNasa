@@ -1,70 +1,75 @@
 package br.com.teste.contaazul.contaazul.model;
 
-import br.com.teste.contaazul.contaazul.enuns.CoordenadaEnum;
+import br.com.teste.contaazul.contaazul.enuns.OrientacaoEnum;
+import br.com.teste.contaazul.contaazul.exception.BadRequestException;
 
 public class Robo {
 
-    private int coordenadaX;
-    private int coordenadaY;
-    private CoordenadaEnum orietacao;
+    private Coordenada coordenada;
+    private Terreno terreno;
 
     public Robo() {}
 
-    public Robo(int coordenadaX, int coordenadaY, CoordenadaEnum orietacao) {
-        this.coordenadaX = coordenadaX;
-        this.coordenadaY = coordenadaY;
-        this.orietacao = orietacao;
+    public void ligar(Terreno terreno, Coordenada coordenada) {
+        this.coordenada = coordenada;
+        this.terreno = terreno;
     }
 
-    public int getCoordenadaX() {
-        return coordenadaX;
+    public void executarComandos(Comando comando) {
+        comando.comados().forEach(c -> {
+            if(comando.mover(c)){
+                if(OrientacaoEnum.NORTE.equals(this.getCoordenada().getOrientacao()) || OrientacaoEnum.SUL.equals(this.getCoordenada().getOrientacao())) {
+                    andarEixoY();                
+                } else {
+                    andarEixoX();
+                }
+            }else {
+                this.getCoordenada().vira(c);
+            }
+            posicaoValida();
+        });
     }
 
-    public void setCoordenadaX(int coordenadaX) {
-        this.coordenadaX = coordenadaX;
-    }
-
-    public int getCoordenadaY() {
-        return coordenadaY;
-    }
-
-    public void setCoordenadaY(int coordenadaY) {
-        this.coordenadaY = coordenadaY;
-    }
-
-    public CoordenadaEnum getOrietacao() {
-        return orietacao;
-    }
-
-    public void setOrietacao(CoordenadaEnum orietacao) {
-        this.orietacao = orietacao;
-    }
-
-    public void andarEixoY() {
-        if(CoordenadaEnum.NORTE.equals(this.getOrietacao())) {
-            this.coordenadaY ++;
-        } else {
-            this.coordenadaY --;
+    private void posicaoValida() {
+        if(this.coordenada.getPosicao().getX() < 0 || this.coordenada.getPosicao().getX() > this.terreno.getEixoX() - 1
+           || this.coordenada.getPosicao().getY() < 0 || this.coordenada.getPosicao().getY() > this.terreno.getEixoY() - 1) {
+            throw new BadRequestException("Posição invalida.");
         }
     }
 
-    public void andarEixoX() {
-        if(CoordenadaEnum.LESTE.equals(this.getOrietacao())) {
-            this.coordenadaX ++;
+    private void andarEixoX() {
+        if(OrientacaoEnum.LESTE.equals(this.getCoordenada().getOrientacao())) {
+            this.getCoordenada().getPosicao().incrementaX();
         } else {
-            this.coordenadaX --;
+            this.getCoordenada().getPosicao().decrementaX();
         }
     }
 
-    public void virar(String direcao) {
-        this.orietacao = CoordenadaEnum.virar(this.orietacao, direcao);
+    private void andarEixoY() {
+        if(OrientacaoEnum.NORTE.equals(this.getCoordenada().getOrientacao())) {
+            this.getCoordenada().getPosicao().incrementaY();
+        } else {
+            this.getCoordenada().getPosicao().decrementaY();
+        }
     }
 
-    @Override
-    public String toString() {
-        return new StringBuffer("(").append(this.getCoordenadaX()).append(",").append(this.getCoordenadaY()).append(",")
-                .append(this.getOrietacao().getCoordenada()).append(")").toString();
+    public String desligar(){
+        return getCoordenada().toString();
     }
 
+    public Coordenada getCoordenada() {
+        return coordenada;
+    }
 
+    public void setCoordenada(Coordenada coordenada) {
+        this.coordenada = coordenada;
+    }
+
+    public Terreno getTerreno() {
+        return terreno;
+    }
+
+    public void setTerreno(Terreno terreno) {
+        this.terreno = terreno;
+    }
 }

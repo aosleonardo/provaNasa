@@ -1,0 +1,3 @@
+# Configuração service
+server:
+  port: 8080
