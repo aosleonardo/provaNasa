@@ -5,7 +5,11 @@ public class Terreno {
     private int eixoX;
     private int eixoY;
 
-    public Terreno() {}
+    public Terreno() {
+        this.eixoX = 5;
+        this.eixoY = 5;
+
+    }
 
     public Terreno(int eixoX, int eixoY) {
         this.eixoX = eixoX;

@@ -5,7 +5,10 @@ public class Posicao {
     private int x;
     private int y;
 
-    public Posicao() {}
+    public Posicao() {
+        this.x = 0;
+        this.y = 0;
+    }
 
     public Posicao(int x, int y) {
         this.x = x;

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/rest")
-@Api(value="Mars", description="Controle do robõ Mars")
+@Api(value="Mars", description="Controle do robô Mars")
 public class MarsController {
 
     @Autowired
