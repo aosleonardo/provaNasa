@@ -36,7 +36,6 @@ public class CoordenadaTest extends ContaazulApplicationTests {
         coordenada.setPosicao(null);
     }
 
-
     @Test
     public void aoNorteAoVirarParaEsquerdaAOrientacaoDeveSerOeste() {
         Coordenada coordenada = new Coordenada();

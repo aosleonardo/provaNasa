@@ -1,5 +1,6 @@
 package br.com.teste.contaazul.contaazul;
 
+import br.com.teste.contaazul.contaazul.exception.BadRequestException;
 import br.com.teste.contaazul.contaazul.model.Posicao;
 import org.junit.Assert;
 import org.junit.Test;
@@ -70,13 +71,13 @@ public class PosicaoTest extends ContaazulApplicationTests {
     }
 
 
-    @Test( expected = IllegalArgumentException.class)
+    @Test( expected = BadRequestException.class)
     public void decrementaXNaoPodeAtribuirValorNegativo() {
         Posicao posicao = new Posicao(0,2);
         posicao.decrementaX();
     }
 
-    @Test( expected = IllegalArgumentException.class)
+    @Test( expected = BadRequestException.class)
     public void decrementaYNaoPodeAtribuirValorNegativo() {
         Posicao posicao = new Posicao(2,0);
         posicao.decrementaY();

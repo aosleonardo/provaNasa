@@ -1,5 +1,7 @@
 package br.com.teste.contaazul.contaazul.model;
 
+import br.com.teste.contaazul.contaazul.exception.BadRequestException;
+
 public class Posicao {
 
     private int x;
@@ -25,7 +27,7 @@ public class Posicao {
 
     public void decrementaX() {
         if(this.x <= 0) {
-            throw new IllegalArgumentException("A posição X não pode ser menor que 0;");
+            throw new BadRequestException("Posição invalida.");
         }
         this.x --;
     }
@@ -36,7 +38,7 @@ public class Posicao {
 
     public void decrementaY() {
         if(this.y <= 0) {
-            throw new IllegalArgumentException("A posição Y não pode ser menor que 0;");
+            throw new BadRequestException("Posição invalida.");
         }
         this.y --;
     }
