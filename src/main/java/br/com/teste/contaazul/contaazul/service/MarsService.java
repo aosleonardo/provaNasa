@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MarsService {
     public String executaComando(String comando) {
-        Coordenada coordenada = new Coordenada(OrientacaoEnum.NORTE, new Posicao());
+        Coordenada coordenada = new Coordenada();
 
         Robo mars = new Robo();
         mars.ligar(new Terreno(),coordenada);

@@ -61,15 +61,7 @@ public class Robo {
         return coordenada;
     }
 
-    public void setCoordenada(Coordenada coordenada) {
-        this.coordenada = coordenada;
-    }
-
-    public Terreno getTerreno() {
+      public Terreno getTerreno() {
         return terreno;
-    }
-
-    public void setTerreno(Terreno terreno) {
-        this.terreno = terreno;
     }
 }

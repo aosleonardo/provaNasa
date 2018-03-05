@@ -38,14 +38,6 @@ public class Comando {
             throw new BadRequestException("Comando invalido.");
         }
     }
-
-    public String getComando() {
-        return comando;
-    }
-
-    public void setComando(String comando) {
-        this.comando = comando;
-    }
 }
 
 

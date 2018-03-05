@@ -4,7 +4,7 @@ O sistema foi desenvolvido para ajudar o robo Mars a se movimentar em Marte.
 
 Ele aceita, através de uma API Rest, comandos para andar e virar.
 
-Ao final da trajetória, o robô informará sua posição final dentro do terreno.
+Ao final da trajetória, o robô informa sua posição final dentro do terrendo.
 
 ##Configuração
 

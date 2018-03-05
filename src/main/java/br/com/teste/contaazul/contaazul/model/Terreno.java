@@ -21,6 +21,9 @@ public class Terreno {
     }
 
     public void setEixoX(int eixoX) {
+        if (eixoX < 0) {
+            throw new IllegalArgumentException("Eixo X não pode ser menor que 0.");
+        }
         this.eixoX = eixoX;
     }
 
@@ -29,6 +32,9 @@ public class Terreno {
     }
 
     public void setEixoY(int eixoY) {
+        if (eixoY < 0) {
+            throw new IllegalArgumentException("Eixo Y não pode ser menor que 0.");
+        }
         this.eixoY = eixoY;
     }
 }

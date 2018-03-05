@@ -8,9 +8,15 @@ public class Coordenada {
     private OrientacaoEnum orientacao;
     private Posicao posicao;
 
-    public Coordenada() {}
+    public Coordenada() {
+        this.orientacao = OrientacaoEnum.NORTE;
+        this.posicao = new Posicao();
+    }
 
     public Coordenada(OrientacaoEnum orientacao, Posicao posicao) {
+        if(orientacao == null || posicao == null) {
+            throw new NullPointerException();
+        }
         this.orientacao = orientacao;
         this.posicao = posicao;
     }
@@ -55,6 +61,10 @@ public class Coordenada {
     }
 
     public void setOrientacao(OrientacaoEnum orientacao) {
+        if(orientacao == null ) {
+            throw new NullPointerException();
+        }
+
         this.orientacao = orientacao;
     }
 
@@ -63,6 +73,9 @@ public class Coordenada {
     }
 
     public void setPosicao(Posicao posicao) {
+        if(posicao == null ) {
+            throw new NullPointerException();
+        }
         this.posicao = posicao;
     }
 
