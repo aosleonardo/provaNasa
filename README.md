@@ -17,8 +17,10 @@ O robô Mars sempre começa na posição (0,0,N) e o terreno foi programado com 
 
 Para informar os camandos basta enviar uma requisição **GET** para a url: **http://localhost:8080/rest/mars/{comando}**, como no exemplo.
 
-- http://localhost:8080/rest/mars/{comando}
+- http://localhost:8080/rest/mars/mml
 
 ## Documentação
 
 Para acessar a documentação da API basta acessar o link: **http://localhost:8080/swagger-ui.html**
+
+[![Build Status](https://travis-ci.org/aosleonardo/provaNasa.svg?branch=master)](https://travis-ci.org/aosleonardo/provaNasa)
