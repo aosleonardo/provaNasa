@@ -1,14 +1,14 @@
 # Mars robô Marciano
 
-O sistema foi desenvolvido para ajudar o robo Mars a se movimentar em Marte.
+O sistema foi desenvolvido para ajudar o robô Mars a se movimentar em Marte.
 
 Ele aceita, através de uma API Rest, comandos para andar e virar.
 
-Ao final da trajetória, o robô informa sua posição final dentro do terrendo.
+Ao final da trajetória, o Mars informa sua posição final dentro do terreno.
 
 ## Configuração
 
-O robô Mars sempre começa na posição (0,0,N) e o terreno foi programado com o tamanho de 5 x 5.
+Mars sempre começa na posição (0,0,N) e o terreno foi programado com o tamanho default de 5 x 5.
 
 ## Comandos
 - M - Andar;
