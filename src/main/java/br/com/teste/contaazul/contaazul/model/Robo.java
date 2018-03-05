@@ -1,6 +1,6 @@
 package br.com.teste.contaazul.contaazul.model;
 
-import br.com.teste.contaazul.contaazul.enuns.OrientacaoEnum;
+import br.com.teste.contaazul.contaazul.domain.OrientacaoEnum;
 import br.com.teste.contaazul.contaazul.exception.BadRequestException;
 
 public class Robo {
@@ -11,6 +11,10 @@ public class Robo {
     public Robo() {}
 
     public void ligar(Terreno terreno, Coordenada coordenada) {
+        if(terreno == null || coordenada == null) {
+            throw new NullPointerException("Deve ser informado o Terreno e a Coordenada");
+        }
+
         this.coordenada = coordenada;
         this.terreno = terreno;
     }

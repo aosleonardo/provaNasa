@@ -1,6 +1,5 @@
 package br.com.teste.contaazul.contaazul.service;
 
-import br.com.teste.contaazul.contaazul.enuns.OrientacaoEnum;
 import br.com.teste.contaazul.contaazul.model.*;
 import org.springframework.stereotype.Service;
 

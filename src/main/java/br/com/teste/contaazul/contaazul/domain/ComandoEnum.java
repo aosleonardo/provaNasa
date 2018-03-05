@@ -1,4 +1,4 @@
-package br.com.teste.contaazul.contaazul.enuns;
+package br.com.teste.contaazul.contaazul.domain;
 
 public enum ComandoEnum {
     PASSO(1, "M"), ESQUERDA(2,"L"), DIREITA(3,"R");

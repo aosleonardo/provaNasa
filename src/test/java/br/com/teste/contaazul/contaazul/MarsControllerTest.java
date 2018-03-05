@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.junit.Assert.fail;
 
-public class MarsControllerTest extends ContaazulApplicationTests {
+public class MarsControllerTest extends ContaAzulApplicationTests {
 
     private MockMvc mockMvc;
 

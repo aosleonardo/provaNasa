@@ -1,4 +1,4 @@
-package br.com.teste.contaazul.contaazul.enuns;
+package br.com.teste.contaazul.contaazul.domain;
 
 public enum OrientacaoEnum {
     LESTE("E"), NORTE("N"), OESTE("W"), SUL("S");

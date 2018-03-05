@@ -1,6 +1,6 @@
 package br.com.teste.contaazul.contaazul.model;
 
-import br.com.teste.contaazul.contaazul.enuns.ComandoEnum;
+import br.com.teste.contaazul.contaazul.domain.ComandoEnum;
 import br.com.teste.contaazul.contaazul.exception.BadRequestException;
 
 import java.util.Arrays;
