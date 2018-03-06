@@ -1,4 +1,4 @@
-package br.com.teste.contaazul.contaazul;
+package br.com.teste.contaazul.contaazul.controller;
 
 import br.com.teste.contaazul.contaazul.exception.BadRequestException;
 import br.com.teste.contaazul.contaazul.model.Comando;

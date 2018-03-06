@@ -1,4 +1,4 @@
-package br.com.teste.contaazul.contaazul;
+package br.com.teste.contaazul.contaazul.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

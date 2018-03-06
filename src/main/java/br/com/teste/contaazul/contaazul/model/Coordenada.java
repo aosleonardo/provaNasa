@@ -3,6 +3,8 @@ package br.com.teste.contaazul.contaazul.model;
 import br.com.teste.contaazul.contaazul.domain.ComandoEnum;
 import br.com.teste.contaazul.contaazul.domain.OrientacaoEnum;
 
+import java.util.Objects;
+
 public class Coordenada {
 
     private OrientacaoEnum orientacao;
@@ -14,9 +16,9 @@ public class Coordenada {
     }
 
     public Coordenada(OrientacaoEnum orientacao, Posicao posicao) {
-        if(orientacao == null || posicao == null) {
-            throw new NullPointerException();
-        }
+        Objects.requireNonNull(orientacao );
+        Objects.requireNonNull(posicao );
+
         this.orientacao = orientacao;
         this.posicao = posicao;
     }
@@ -61,10 +63,7 @@ public class Coordenada {
     }
 
     public void setOrientacao(OrientacaoEnum orientacao) {
-        if(orientacao == null ) {
-            throw new NullPointerException();
-        }
-
+        Objects.requireNonNull(orientacao);
         this.orientacao = orientacao;
     }
 
@@ -73,9 +72,7 @@ public class Coordenada {
     }
 
     public void setPosicao(Posicao posicao) {
-        if(posicao == null ) {
-            throw new NullPointerException();
-        }
+        Objects.requireNonNull(posicao);
         this.posicao = posicao;
     }
 

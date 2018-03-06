@@ -3,6 +3,8 @@ package br.com.teste.contaazul.contaazul.model;
 import br.com.teste.contaazul.contaazul.domain.OrientacaoEnum;
 import br.com.teste.contaazul.contaazul.exception.BadRequestException;
 
+import java.util.Objects;
+
 public class Robo {
 
     private Coordenada coordenada;
@@ -11,9 +13,8 @@ public class Robo {
     public Robo() {}
 
     public void ligar(Terreno terreno, Coordenada coordenada) {
-        if(terreno == null || coordenada == null) {
-            throw new NullPointerException("Deve ser informado o Terreno e a Coordenada");
-        }
+        Objects.requireNonNull(terreno);
+        Objects.requireNonNull(coordenada);
 
         this.coordenada = coordenada;
         this.terreno = terreno;
