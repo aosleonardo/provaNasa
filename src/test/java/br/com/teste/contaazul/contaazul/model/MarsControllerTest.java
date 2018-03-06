@@ -1,6 +1,6 @@
 package br.com.teste.contaazul.contaazul.model;
 
-import br.com.teste.contaazul.contaazul.controller.ContaAzulApplicationTests;
+import br.com.teste.contaazul.contaazul.ContaAzulApplicationTests;
 import br.com.teste.contaazul.contaazul.controller.MarsController;
 import org.junit.Before;
 import org.junit.Test;

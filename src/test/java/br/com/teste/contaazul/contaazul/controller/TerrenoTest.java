@@ -1,5 +1,6 @@
 package br.com.teste.contaazul.contaazul.controller;
 
+import br.com.teste.contaazul.contaazul.ContaAzulApplicationTests;
 import br.com.teste.contaazul.contaazul.model.Terreno;
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,5 +1,6 @@
 package br.com.teste.contaazul.contaazul.controller;
 
+import br.com.teste.contaazul.contaazul.ContaAzulApplicationTests;
 import br.com.teste.contaazul.contaazul.exception.BadRequestException;
 import br.com.teste.contaazul.contaazul.model.Posicao;
 import org.junit.Assert;
